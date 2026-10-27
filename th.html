@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <title>SkyNet Transmission History</title>
+  <link rel="icon" href="assets/images/icon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="light">
+  <main class="th">
+    <div class="p1-top">
+      <a class="icon-btn" href="dash.html" id="back" aria-label="Back"></a>
+      <h1 style="flex:1">Transmission History Log</h1>
+      <button class="icon-btn hidden" id="clear" aria-label="Clear all history"></button>
+    </div>
+    <div id="list"></div>
+  </main>
+
+  <div class="overlay" id="confirm">
+    <div class="confirm">
+      <h2>Clear Transmission History</h2>
+      <p>Are you completely certain you want to purge all transaction records? This cannot be reverted.</p>
+      <div class="acts"><button id="c-cancel">Cancel</button><button class="danger" id="c-ok">Clear All</button></div>
+    </div>
+  </div>
+  <script type="module" src="js/th.js"></script>
+</body>
+</html>

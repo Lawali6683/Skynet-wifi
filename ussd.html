@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0d0e15">
+  <title>SkyNet USSD</title>
+  <link rel="icon" href="assets/images/icon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="page" style="padding:0">
+    <div class="p1-top" style="padding:12px 12px 0;margin:0">
+      <a class="icon-btn" href="dash.html" id="back" aria-label="Back" style="color:#fff"></a>
+      <h1 style="font-size:16px">USSD Dialer</h1>
+    </div>
+    <div class="dialer">
+      <input class="dial-input" id="dial" type="text" inputmode="none" autocomplete="off" placeholder="#221#" aria-label="USSD code">
+      <div class="keys" id="keys"></div>
+      <button class="call-btn" id="call" aria-label="Call"></button>
+      <p class="dial-hint">Dial #221#, #111#, #112# or #113#</p>
+    </div>
+  </main>
+
+  <div class="overlay" id="ussd">
+    <div class="ussd-box">
+      <div class="ussd-head"><b id="u-title"></b><small id="u-sub"></small></div>
+      <div class="ussd-body">
+        <pre id="u-body"></pre>
+        <input id="u-input" autocomplete="off">
+      </div>
+      <div class="ussd-foot"><button class="u-back" id="u-back"></button><button class="u-ok" id="u-ok"></button></div>
+    </div>
+  </div>
+  <script type="module" src="js/ussd.js"></script>
+</body>
+</html>

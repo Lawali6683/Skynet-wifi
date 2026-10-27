@@ -1,0 +1,14 @@
+{
+  "name": "SkyNet WiFi",
+  "short_name": "SkyNet",
+  "description": "Fast internet data, free VPN, HD calls and instant messaging.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#061a45",
+  "theme_color": "#0a3fa8",
+  "icons": [
+    { "src": "assets/icon.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

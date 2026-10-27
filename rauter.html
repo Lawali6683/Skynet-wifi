@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <title>SkyNet Reseller Node</title>
+  <link rel="icon" href="assets/images/icon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="light">
+  <main class="rt">
+    <div class="p1-top">
+      <a class="icon-btn" href="dash.html" id="back" aria-label="Back"></a>
+      <h1 style="flex:1">Local Reseller Node Dashboard</h1>
+      <button class="icon-btn" id="refresh" aria-label="Refresh"></button>
+    </div>
+
+    <div class="rt-grid">
+      <section class="card r-cfg" id="cfg"></section>
+
+      <section class="card r-leases">
+        <h3>Live Local DHCP Leases <span class="chip off" id="count">Router offline</span></h3>
+        <div id="leases"></div>
+      </section>
+
+      <section class="card r-hist">
+        <h3>Immutable Station Consumption Logs</h3>
+        <div id="history"></div>
+      </section>
+    </div>
+  </main>
+
+  <div class="overlay" id="intercept">
+    <div class="dlg">
+      <h2><span id="ic-warn"></span>Intercept Node Identified</h2>
+      <div class="mac" id="mac"></div>
+      <div class="field plain"><input id="c-name" type="text" placeholder=" " autocomplete="off"><label for="c-name">Client Full Name</label></div>
+      <select class="select" id="c-alloc"><option value="500 MB">500 MB</option><option value="Custom GB">Custom GB</option></select>
+      <div class="field plain hidden" id="c-gb-wrap"><input id="c-gb" type="number" min="0" step="any" inputmode="decimal" placeholder=" "><label for="c-gb">Enter GB Volume</label></div>
+      <div class="field plain"><input id="c-pass" type="text" placeholder=" " autocomplete="off"><label for="c-pass">Distinct Link Passphrase</label></div>
+      <div class="acts"><button class="ig" id="c-ignore">Ignore</button><button class="ok" id="c-ok">Authorize Lane</button></div>
+    </div>
+  </div>
+
+  <script type="module" src="js/router.js"></script>
+</body>
+</html>

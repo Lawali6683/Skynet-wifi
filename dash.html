@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <title>SkyNet Dashboard</title>
+  <link rel="icon" href="assets/images/icon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="light">
+  <div class="dash">
+    <header class="topbar">
+      <button class="icon-btn" id="menu" aria-label="Menu"></button>
+      <div class="brand">
+        <div class="brand-name"><span id="ic-wifi"></span><span class="tx">SkyNet WiFi</span></div>
+        <div class="hello" id="hello"></div>
+      </div>
+      <button class="icon-btn" id="bell" aria-label="Notifications">
+        <span id="ic-bell"></span><span class="badge hidden" id="badge"></span>
+      </button>
+    </header>
+
+    <main class="content">
+      <div class="grid">
+        <section class="card wallet g-wallet">
+          <div class="cap"><span>SKYNET UNIQUE WALLET</span><span id="ic-card"></span></div>
+          <div class="amount"><span id="balance"></span><button id="toggle-balance" aria-label="Toggle balance"></button></div>
+          <div class="acts">
+            <a href="withdraw.html"><span id="ic-up"></span>Withdrawal</a>
+            <a href="th.html"><span id="ic-hist"></span>History Matrix</a>
+          </div>
+        </section>
+
+        <section class="card bank g-bank">
+          <div class="row">
+            <div><small>VIRTUAL FUNDING ACCOUNT</small><b class="n">Wema Bank Plc</b></div>
+            <div class="logo-box"><img src="assets/images/wema.png" alt="" id="wema"><span id="ic-bank" class="hidden"></span></div>
+          </div>
+          <div class="acc">
+            <small>ACCOUNT NUMBER</small>
+            <div class="row"><strong id="acc"></strong><button class="copy-btn" id="copy" aria-label="Copy"></button></div>
+          </div>
+        </section>
+
+        <section class="card g-meter" id="meter"></section>
+
+        <div class="g-ad" id="ad"></div>
+      </div>
+    </main>
+
+    <nav class="footer-nav" id="nav"></nav>
+  </div>
+
+  <div class="scrim" id="scrim"></div>
+  <aside class="drawer" id="drawer">
+    <div class="dh"><button class="icon-btn" id="drawer-close" aria-label="Close"></button></div>
+    <div class="dt"><span id="ic-dwifi"></span><b>SkyNet Core Matrix</b></div>
+    <nav id="drawer-nav"></nav>
+  </aside>
+
+  <div class="overlay" id="notif-overlay">
+    <div class="notif">
+      <header><span>Audit Statement Logs</span><button id="notif-close" aria-label="Close"></button></header>
+      <ul id="notif-list"></ul>
+      <button class="btn red hidden" id="flush">FLUSH ACCOUNT LOGS</button>
+    </div>
+  </div>
+
+  <script type="module" src="js/dash.js"></script>
+</body>
+</html>

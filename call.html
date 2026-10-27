@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0d47a1">
+  <title>SkyNet Call</title>
+  <link rel="icon" href="assets/images/icon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="light">
+  <div class="call-wrap">
+    <header class="call-head">
+      <a class="icon-btn" href="dash.html" id="back" aria-label="Back"></a>
+      <div><b>SkyNet Core Audio/Video Panel</b><small id="sub"></small></div>
+    </header>
+    <nav class="tabs" id="tabs"></nav>
+    <div class="toolbar"><button class="btn outline" id="pick" style="color:var(--text)">Add / Import Contacts</button><button class="btn" id="sync">Sync Contacts</button></div>
+    <div id="list"></div>
+  </div>
+
+  <div class="incall" id="incall">
+    <video id="remote" autoplay playsinline></video>
+    <div class="who" id="who"><div class="big" id="who-av"></div><b id="who-name"></b><small id="who-state"></small></div>
+    <div class="pip hidden" id="pip"><video id="local" autoplay playsinline muted></video><button id="pip-close" aria-label="Hide preview"></button></div>
+    <div class="ctrls" id="ctrls"></div>
+  </div>
+
+  <div class="overlay" id="missed"><div class="sheet-light"><h2>Offline Missed Calls</h2><ul class="mc" id="missed-list"></ul><button class="cancel" id="missed-close">Close</button></div></div>
+
+  <div class="overlay" id="upgrade">
+    <div class="sheet-light">
+      <h2>Premium Video Access Required</h2>
+      <p>Your video plan is inactive. Unlock high-fidelity video calling for 30 consecutive days.</p>
+      <div class="pin-row" id="up-pin"></div>
+      <button class="btn" id="up-pay" disabled>Pay in your wallet - ₦3,000/Month</button>
+      <button class="cancel" id="up-cancel">Cancel</button>
+    </div>
+  </div>
+
+  <div class="overlay" id="msg">
+    <div class="sheet-light">
+      <h2 id="msg-title">Message</h2>
+      <input class="txt" id="msg-text" maxlength="50" placeholder="Type a short message">
+      <button class="btn" id="msg-send">Send</button>
+      <button class="cancel" id="msg-cancel">Cancel</button>
+    </div>
+  </div>
+
+  <div class="overlay" id="add">
+    <div class="sheet-light">
+      <h2>Add Contact</h2>
+      <input class="txt" id="add-name" placeholder="Name">
+      <input class="txt" id="add-phone" inputmode="tel" placeholder="Phone number">
+      <button class="btn" id="add-save">Save</button>
+      <button class="cancel" id="add-cancel">Cancel</button>
+    </div>
+  </div>
+
+  <script type="module" src="js/call.js"></script>
+</body>
+</html>

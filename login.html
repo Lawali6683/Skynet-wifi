@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0d0e15">
+  <title>SkyNet Login</title>
+  <link rel="icon" href="assets/images/icon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="page">
+    <img class="logo md rise" src="assets/images/icon.png" alt="SkyNet" style="margin-top:20px">
+    <h1 class="title rise d1" style="margin-top:22px;margin-bottom:32px">SkyNet Intranet Pipeline Login</h1>
+
+    <form id="form" novalidate autocomplete="off">
+      <div class="field rise d2" id="f-email">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5 0 0 0 5 0V12a9 9 0 1 0-3.5 7.1"/></svg>
+        <input id="email" type="email" inputmode="email" placeholder=" ">
+        <label for="email">Email Address</label>
+      </div>
+
+      <div class="field rise d3" id="f-password">
+        <svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 7.5-2"/></svg>
+        <input id="password" type="password" placeholder=" ">
+        <label for="password">Password Token</label>
+        <button class="eye" type="button" id="eye" aria-label="Show password"></button>
+      </div>
+
+      <div class="align-right rise d3">
+        <a class="link-btn muted" href="forget.html">Forgot Password?</a>
+      </div>
+
+      <div class="denied hidden" id="denied">
+        <h3>Access Denied: Unregistered Device</h3>
+        <p>This device is not authorized for this account. Each account is restricted to one hardware setup. If you own this account and want to switch registration to this device, tap below to process a device swap.</p>
+        <button class="btn danger-outline" type="button" id="change-device">AUTHORIZE THIS DEVICE NOW</button>
+      </div>
+
+      <button class="btn rise d4" type="submit" style="margin-top:18px">INITIALIZE LINK</button>
+    </form>
+
+    <div class="link-row rise d5">
+      <a class="link-btn" href="register.html">Don't have an account? Register</a>
+    </div>
+  </main>
+
+  <script type="module" src="js/login.js"></script>
+</body>
+</html>

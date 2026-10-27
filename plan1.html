@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <title>SkyNet Data Plan</title>
+  <link rel="icon" href="assets/images/icon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="light">
+  <main class="p1">
+    <div class="p1-top">
+      <a class="icon-btn" href="dash.html" id="back" aria-label="Back"></a>
+      <h1>Data Plan GB</h1>
+    </div>
+
+    <div class="p1-layout">
+      <section class="bal-card a-bal rise">
+        <small>ACTIVE WALLET INTERFACE LEDGER</small>
+        <b id="balance"></b>
+      </section>
+
+      <section class="banner-txt a-banner rise d1" id="banner"></section>
+
+      <section class="a-plans rise d2">
+        <h2>Select Volume Allocation Tier</h2>
+        <div class="plan-grid" id="plan-grid"></div>
+        <button class="plan-others" id="others" type="button">OTHERS</button>
+        <div class="field hidden" id="custom">
+          <input id="custom-gb" type="number" min="0" step="any" inputmode="decimal" placeholder=" ">
+          <label for="custom-gb">Enter Custom Data Volume (GB)</label>
+        </div>
+        <p class="hint hidden" id="hint"></p>
+      </section>
+
+      <section class="a-pin rise d3">
+        <h2>Transaction Verification PIN</h2>
+        <div class="pin-row" id="pin-row"></div>
+      </section>
+
+      <div class="a-submit" id="submit-wrap"></div>
+
+      <section class="card ref a-ref rise d4" id="referral">
+        <h3>Invite Friends &amp; Secure Bonus Rewards</h3>
+        <p>Invite your network connections to SkyNet WiFi! Earn an instant ₦200 wallet reward plus 2 days of unrestricted high-speed internet access completely free once they verify.</p>
+        <label>Referral Link Node</label>
+        <div class="token"><code id="ref-link"></code><button type="button" data-copy="ref-link" data-name="Referral Link Node"></button></div>
+        <label>Referral Token Code</label>
+        <div class="token"><code id="ref-code"></code><button type="button" data-copy="ref-code" data-name="Referral Token Code"></button></div>
+      </section>
+    </div>
+  </main>
+  <script type="module" src="js/plan1.js"></script>
+</body>
+</html>

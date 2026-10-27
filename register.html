@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0d0e15">
+  <title>SkyNet Register</title>
+  <link rel="icon" href="assets/images/icon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="page">
+    <img class="logo sm rise" src="assets/images/icon.png" alt="SkyNet">
+    <h1 class="title rise d1">Intranet Portal Registration</h1>
+
+    <form id="form" novalidate autocomplete="off">
+      <div class="field rise d2" data-field="name">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6"/></svg>
+        <input id="name" type="text" placeholder=" ">
+        <label for="name">Full Name</label>
+      </div>
+
+      <div class="field rise d2" data-field="phone">
+        <svg viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/></svg>
+        <input id="phone" type="tel" inputmode="tel" placeholder=" ">
+        <label for="phone">Phone Number</label>
+      </div>
+
+      <div class="field rise d3" data-field="email">
+        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 7 8.5-7"/></svg>
+        <input id="email" type="email" inputmode="email" placeholder=" ">
+        <label for="email">Email Address</label>
+      </div>
+
+      <div class="field rise d3" data-field="referral">
+        <svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.5 6H14a3 3 0 0 1 0 6H10a3 3 0 0 0 0 6h5.5"/></svg>
+        <input id="referral" type="text" inputmode="numeric" placeholder=" ">
+        <label for="referral">Optional Referral Code</label>
+      </div>
+
+      <p class="section-label rise d4">Security PIN Configuration</p>
+      <div class="pin-row rise d4" id="pin-row">
+        <input type="password" inputmode="numeric" maxlength="1" aria-label="PIN 1">
+        <input type="password" inputmode="numeric" maxlength="1" aria-label="PIN 2">
+        <input type="password" inputmode="numeric" maxlength="1" aria-label="PIN 3">
+        <input type="password" inputmode="numeric" maxlength="1" aria-label="PIN 4">
+      </div>
+
+      <div class="field rise d5" data-field="password">
+        <svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+        <input id="password" type="password" placeholder=" ">
+        <label for="password">Password Token</label>
+        <button class="eye" type="button" data-eye="password" aria-label="Show password"></button>
+      </div>
+
+      <div class="field rise d5" data-field="confirm">
+        <svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3M12 15v1.5"/></svg>
+        <input id="confirm" type="password" placeholder=" ">
+        <label for="confirm">Confirm Password Token</label>
+        <button class="eye" type="button" data-eye="confirm" aria-label="Show password"></button>
+      </div>
+
+      <button class="btn rise d6" type="submit" style="margin-top:16px">CONTINUE</button>
+    </form>
+
+    <div class="link-row rise d6">
+      <a class="link-btn" href="login.html">Already have an account? Login</a>
+    </div>
+  </main>
+
+  <div class="overlay" id="overlay">
+    <div class="sheet">
+      <h2>Profile Synchronization</h2>
+      <p>Capture or upload a valid front-facing avatar</p>
+      <div class="avatar" id="avatar">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+      </div>
+      <div class="two">
+        <button class="btn outline" type="button" id="pick-camera">Front Camera</button>
+        <button class="btn outline" type="button" id="pick-gallery">Gallery</button>
+      </div>
+      <button class="btn" type="button" id="activate">UPLOAD &amp; ACTIVATE</button>
+      <button class="cancel" type="button" id="cancel">Cancel</button>
+    </div>
+  </div>
+
+  <input type="file" id="file-camera" accept="image/*" capture="user" hidden>
+  <input type="file" id="file-gallery" accept="image/*" hidden>
+
+  <script type="module" src="js/register.js"></script>
+</body>
+</html>
